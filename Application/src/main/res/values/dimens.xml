@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="camera_activity_text_view_high">20dp</dimen>
+    <dimen name="camera_activity_margin_top">50</dimen>
+    <dimen name="main_activity_video_icon">150dp</dimen>
+    <dimen name="main_activity_margin_top">250dp</dimen>
+    <dimen name="buttons_width">120dp</dimen>
+</resources>

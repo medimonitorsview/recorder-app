@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright 2014 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources>
+    <string name="picture">Picture</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="server_url">http://localhost:3000</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="start_taking_pictures_button">start_taking_pictures_button</string>
+    <string name="default_patient_number">##########</string>
+    <string name="stop_taking_pictures_button_text">הפסק צילום</string>
+    <string name="start_video_text">לחץ על הכפתור האדום להתחלת צילום</string>
+    <string name="stop_taking_pictures_dialog">להפסיק צילום?</string>
+    <string name="stop_taking_picture_dialog_keep_taking_pictures">המשך צילום</string>
+    <string name="stop_taking_pictures_dialog_stop_taking_pictures">הפסק צילום</string>
+    <string name="qr_monitor_prefix">cvmonitor</string>
+    <string name="can_not_get_segments_from_server_string">לא מצליח לקבל סגמנטים מהשרת</string>
+    <string name="APK_DOWNLOAD_PROBLEM_TOAST">הייתה בעיה בהורדת קובץ העדכון</string>
+
+</resources>

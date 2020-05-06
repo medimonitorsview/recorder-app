@@ -1,0 +1,13 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+if (Os.isFamily(Os.FAMILY_UNIX)) {
+    exec{
+        commandLine "./get-opencv.sh"
+    }
+}
+def opencvsdk='./OpenCV-android-sdk'
+// You can put declaration above into gradle.properties file instead (including file in HOME directory),
+// but without 'def' and apostrophe symbols ('): opencvsdk=<path_to_opencv_android_sdk_rootdir>
+include ':opencv'
+project(':opencv').projectDir = new File(opencvsdk + '/sdk')
+
+include ':Application'
