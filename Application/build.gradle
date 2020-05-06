@@ -95,7 +95,7 @@ android {
             def versionTag = getVersionTag(variant.buildType.name)
             print(versionTag + '\n')
             output.versionNameOverride = getVersionName(versionTag)
-            output.outputFileName = "${parent.name}-${output.baseName}-v${output.versionNameOverride}.apk"
+            output.outputFileName = "$applicationId-${output.baseName}-v${output.versionNameOverride}.apk"
             output.versionCodeOverride = getVersionCode(versionTag)
         }
 
