@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install qrencode
+      run: sudo apt-get install -yyq qrencode libqrencode-dev
     - uses: olegtarasov/get-tag@v2
       id: tagName
     - uses: actions/checkout@v2
