@@ -21,8 +21,8 @@ jobs:
     - name: Build with Gradle
       id: build
       run: |
-        echo ${{ secrets.KEYSTORE_FILE }} | base64 -d - > ./keystore.jks
-        export ORG_GRADLE_PROJECT_RELEASE_STORE_FILE=./keystore.jks
+        echo ${{ secrets.KEYSTORE_FILE }} | base64 -d - > /tmp/keystore.jks
+        export ORG_GRADLE_PROJECT_RELEASE_STORE_FILE=/tmp/keystore.jks
         export ORG_GRADLE_PROJECT_RELEASE_STORE_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }}
         export ORG_GRADLE_PROJECT_RELEASE_KEY_ALIAS=key0
         export ORG_GRADLE_PROJECT_RELEASE_KEY_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }}
