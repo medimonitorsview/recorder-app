@@ -47,7 +47,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
         asset_path: ./Application/build/outputs/apk/release/org.mdeimonitorsview.android.recorder-release-${{ steps.tagName.outputs.tag }}.apk
-        asset_name: org.mdeimonitorsview.android.recorder-${{ steps.tagName.outputs.tag }}.apk
+        asset_name: org.mdeimonitorsview.android.recorder-release-${{ steps.tagName.outputs.tag }}.apk
         asset_content_type: application/zip
     - name: Upload Debug Asset
       id: upload-release-asset-debug
@@ -57,7 +57,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
         asset_path: ./Application/build/outputs/apk/debug/org.mdeimonitorsview.android.recorder-debug-${{ steps.tagName.outputs.tag }}.apk
-        asset_name: org.mdeimonitorsview.android.recorder-${{ steps.tagName.outputs.tag }}.apk
+        asset_name: org.mdeimonitorsview.android.recorder-debug-${{ steps.tagName.outputs.tag }}.apk
         asset_content_type: application/zip
     - name: Prepare QR
       run: |
