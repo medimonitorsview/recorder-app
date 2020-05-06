@@ -64,7 +64,7 @@ jobs:
         asset_content_type: application/zip
     - name: Prepare QR
       run: |
-        python3 ./provision-qr.py ./Application/build/outputs/apk/release/org.mdeimonitorsview.android.recorder-release-${{ steps.tagName.outputs.tag }}.apk ${{ steps.create_release.outputs.upload_url }}/org.mdeimonitorsview.android.recorder-release-${{ steps.tagName.outputs.tag }}.apk
+        python3 ./provision-qr.py ./Application/build/outputs/apk/release/org.mdeimonitorsview.android.recorder-release-${{ steps.tagName.outputs.tag }}.apk https://github.com/medimonitorsview/recorder-app/releases/download/${{ steps.create_release.outputs.upload_url }}/org.mdeimonitorsview.android.recorder-release-${{ steps.create_release.outputs.upload_url }}.apk
     - name: Upload QR
       id: upload-qr
       uses: actions/upload-release-asset@v1
@@ -75,3 +75,4 @@ jobs:
         asset_path: qr.png
         asset_name: qr-${{ steps.tagName.outputs.tag }}.png
         asset_content_type: image/png
+        
