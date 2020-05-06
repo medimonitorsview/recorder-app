@@ -15,7 +15,7 @@ jobs:
       run: |
         sudo apt-get install -yyq qrencode libqrencode-dev python3-pip python3
         python3 -mpip install setuptools 
-        python3 -mpip install qrencode
+        python3 -mpip install qrencode pillow
     - uses: olegtarasov/get-tag@v2
       id: tagName
     - uses: actions/checkout@v2
