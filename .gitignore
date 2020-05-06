@@ -91,7 +91,9 @@ Application/CMakeFiles/
 .idea/
 Application/CMakeCache.txt
 .settings/
-OpenCV-android-sdk/sdk/
+
 OpenCV-android-sdk/samples
 OpenCV-android-sdk/LICENSE
 OpenCV-android-sdk/README.android
+OpenCV-android-sdk/sdk/**
+!OpenCV-android-sdk/sdk/build.gradle
