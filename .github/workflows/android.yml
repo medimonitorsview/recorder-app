@@ -12,7 +12,10 @@ jobs:
 
     steps:
     - name: Install qrencode
-      run: sudo apt-get install -yyq qrencode libqrencode-dev python3-pip
+      run: |
+        sudo apt-get install -yyq qrencode libqrencode-dev python3-pip python3
+        python3 -mpip install setuptools 
+        python3 -mpip install qrencode
     - uses: olegtarasov/get-tag@v2
       id: tagName
     - uses: actions/checkout@v2
@@ -61,7 +64,6 @@ jobs:
         asset_content_type: application/zip
     - name: Prepare QR
       run: |
-        python3 -mpip install qrencode
         python3 ./provision-qr.py ./Application/build/outputs/apk/release/org.mdeimonitorsview.android.recorder-release-${{ steps.tagName.outputs.tag }}.apk ${{ steps.create_release.outputs.upload_url }}/org.mdeimonitorsview.android.recorder-release-${{ steps.tagName.outputs.tag }}.apk
     - name: Upload QR
       id: upload-qr
